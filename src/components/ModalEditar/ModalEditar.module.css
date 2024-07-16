@@ -1,6 +1,6 @@
 .contenedor {
   background-color: rgba(3, 18, 47, 0.7);
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
@@ -8,56 +8,57 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 2px solid var(--color-azul);
-  height: 2800px;
+  z-index: 999; /* Asegura que el modal esté por encima del resto del contenido */
 }
 
 .modal {
-  position: relative;
   background-color: #03122f;
   border: 5px solid #6bd1ff;
   border-radius: 15px;
-  padding: 80px;
+  padding: 50px; /* Reduje el padding para ajustarlo */
   display: flex;
   flex-direction: column;
   align-items: center;
   color: var(--color-blanco);
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
+  position: relative;
+  max-width: 90%; /* Ajusta el ancho máximo según sea necesario */
+  max-height: 90%; /* Ajusta el alto máximo según sea necesario */
+  overflow: auto; /* Permite desplazamiento cuando el contenido excede el tamaño del modal */
 }
 
 .modal h1 {
-  margin: 0 auto;
-  font-family: "Roboto";
+  margin: 0;
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 900;
-  font-size: 60px;
-  line-height: 70px;
+  font-size: 36px; /* Reduje el tamaño de fuente */
+  line-height: 1.2;
   text-transform: uppercase;
   color: #2271d1;
   text-align: center;
+  margin-bottom: 20px;
 }
 
 .modal input,
-textarea {
-  width: 500px;
-  border-radius: 10px;
-  margin: 5px 0;
-  height: 52px;
+.modal textarea {
+  width: 100%; /* Ajusta el ancho al 100% del contenedor */
+  margin: 10px 0; /* Espaciado entre elementos */
+  padding: 10px; /* Espaciado interno */
+  border: 2px solid #6bd1ff;
   background-color: #03122f;
-  border: 2px solid;
   color: var(--color-blanco);
-  padding: 0 10px;
-  font-size: 18px;
+  font-size: 16px; /* Tamaño de fuente reducido */
+  border-radius: 5px;
 }
 
 .modal textarea {
-  height: 112px;
-  padding: 10px;
+  height: 100px; /* Ajusta la altura según sea necesario */
 }
 
 .botones {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   margin-top: 20px;
   width: 100%;
 }
@@ -66,26 +67,31 @@ textarea {
   background-color: #03122f;
   color: var(--color-blanco);
   border: 2px solid #6bd1ff;
-  border-radius: 10px;
+  border-radius: 5px;
   padding: 10px 20px;
   cursor: pointer;
   flex: 1;
-  margin: 0 5px;
+  margin: 0 10px; /* Espaciado entre botones */
 }
 
 .botones button:hover {
   background-color: black;
-  box-shadow: inset 0 0 10px var(--color-frontend);
+  box-shadow: inset 0 0 10px #6bd1ff; /* Ajusta el color de la sombra al hover */
 }
 
 .closeButton {
-  width: 55px;
-  background-color: transparent;
-  border: none;
   position: absolute;
   top: 10px;
   right: 10px;
+  background-color: transparent;
+  border: none;
   font-size: 24px;
   color: var(--color-blanco);
   cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .modal {
+    padding: 30px; /* Ajusta el padding para pantallas pequeñas */
+  }
 }

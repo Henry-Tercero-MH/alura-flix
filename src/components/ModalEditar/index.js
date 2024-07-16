@@ -1,25 +1,25 @@
 import React, { useState, useEffect } from "react";
 import styles from "./ModalEditar.module.css";
 import CampoTexto from "../CampoTexto/index.js";
-import ListaOpciones from "components/ListaOpciones";
-import CajaComentario from "components/CajaComentario";
-import Boton from "components/Boton";
+import ListaOpciones from "../ListaOpciones/index.js"; // Ajusta la importación según la ubicación real
+import CajaComentario from "../CajaComentario/index.js"; // Ajusta la importación según la ubicación real
+import Boton from "../Boton/index.js"; // Ajusta la importación según la ubicación real
 import cerrarImg from "./cross.png";
 
 const ModalEditar = ({ video, cerrarModal, editarVideo }) => {
-  const [nombre, setNombre] = useState("");
-  const [imagen, setImagen] = useState("");
-  const [videoUrl, setVideoUrl] = useState("");
-  const [equipo, setEquipo] = useState("");
-  const [comentario, setComentario] = useState("");
+  const [nombre, setNombre] = useState(video.nombre || "");
+  const [imagen, setImagen] = useState(video.imagen || "");
+  const [videoUrl, setVideoUrl] = useState(video.video || "");
+  const [equipo, setEquipo] = useState(video.equipo || "");
+  const [comentario, setComentario] = useState(video.comentario || "");
 
   useEffect(() => {
     if (video) {
-      setNombre(video.nombre || "");
-      setImagen(video.imagen || "");
-      setVideoUrl(video.video || "");
-      setEquipo(video.equipo || "");
-      setComentario(video.comentario || "");
+      setNombre(video.nombre);
+      setImagen(video.imagen);
+      setVideoUrl(video.video);
+      setEquipo(video.equipo);
+      setComentario(video.comentario);
     }
   }, [video]);
 
@@ -36,12 +36,6 @@ const ModalEditar = ({ video, cerrarModal, editarVideo }) => {
     };
     editarVideo(videoActualizado);
     cerrarModal(); // Cerrar el modal después de editar
-  };
-
-  const manejarCambioEquipo = (valor) => {
-    setEquipo(valor);
-    // Aquí podrías agregar lógica adicional si deseas actualizar el video
-    // cuando se cambia la categoría.
   };
 
   if (!video) {
@@ -74,9 +68,8 @@ const ModalEditar = ({ video, cerrarModal, editarVideo }) => {
           />
           <ListaOpciones
             titulo="Categoría"
-            placeholder="Seleccione una categoría"
             valor={equipo}
-            onChange={manejarCambioEquipo}
+            setEquipo={setEquipo}
           />
           <CampoTexto
             titulo="Imagen"
