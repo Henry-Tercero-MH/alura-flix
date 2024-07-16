@@ -5,6 +5,7 @@ import iconEdit from "./Edit.png";
 
 const Card = (props) => {
   const { nombre, video, comentario, id } = props.datos;
+  console.log("Card", props.datos);
   const { color, eliminarVideo, setVideoParaEditar } = props;
   const colorSombra = {
     boxShadow: `inset 0 0 15px ${color}`,

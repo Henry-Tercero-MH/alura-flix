@@ -7,19 +7,19 @@ import Boton from "components/Boton";
 import cerrarImg from "./cross.png";
 
 const ModalEditar = ({ video, cerrarModal, editarVideo }) => {
-  const [nombre, setNombre] = useState(video.nombre || "");
-  const [imagen, setImagen] = useState(video.imagen || "");
-  const [videoUrl, setVideoUrl] = useState(video.video || "");
-  const [equipo, setEquipo] = useState(video.equipo || "");
-  const [comentario, setComentario] = useState(video.comentario || "");
+  const [nombre, setNombre] = useState("");
+  const [imagen, setImagen] = useState("");
+  const [videoUrl, setVideoUrl] = useState("");
+  const [equipo, setEquipo] = useState("");
+  const [comentario, setComentario] = useState("");
 
   useEffect(() => {
     if (video) {
-      setNombre(video.nombre);
-      setImagen(video.imagen);
-      setVideoUrl(video.video);
-      setEquipo(video.equipo);
-      setComentario(video.comentario);
+      setNombre(video.nombre || "");
+      setImagen(video.imagen || "");
+      setVideoUrl(video.video || "");
+      setEquipo(video.equipo || "");
+      setComentario(video.comentario || "");
     }
   }, [video]);
 
@@ -29,14 +29,19 @@ const ModalEditar = ({ video, cerrarModal, editarVideo }) => {
     const videoActualizado = {
       ...video,
       nombre,
-      imagen: imagen,
+      imagen,
       video: videoUrl,
       equipo,
       comentario,
     };
     editarVideo(videoActualizado);
-    console.log(videoActualizado);
     cerrarModal(); // Cerrar el modal después de editar
+  };
+
+  const manejarCambioEquipo = (valor) => {
+    setEquipo(valor);
+    // Aquí podrías agregar lógica adicional si deseas actualizar el video
+    // cuando se cambia la categoría.
   };
 
   if (!video) {
@@ -71,7 +76,7 @@ const ModalEditar = ({ video, cerrarModal, editarVideo }) => {
             titulo="Categoría"
             placeholder="Seleccione una categoría"
             valor={equipo}
-            setEquipo={setEquipo}
+            onChange={manejarCambioEquipo}
           />
           <CampoTexto
             titulo="Imagen"
