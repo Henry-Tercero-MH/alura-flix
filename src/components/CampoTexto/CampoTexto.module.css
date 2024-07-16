@@ -1,0 +1,22 @@
+.CampoTexto {
+  color: var(--color-blanco);
+  font-family: Roboto;
+  display: flex;
+  padding-top: 5px;
+  margin: 5px;
+  flex-direction: column;
+}
+
+.CampoTexto input {
+  border-color: solid var(--color-gris);
+  background-color: transparent;
+  border-radius: 10 px;
+  margin-top: 10px;
+  box-sizing: border-box;
+  outline-color: var(--color-rojo);
+}
+.CampoTexto input:focus {
+  border-color: var(
+    --color-rojo
+  ); /* Cambiar color del borde cuando está enfocado */
+}

@@ -1,3 +1,22 @@
 .container {
   display: flex;
+  max-width: 100%;
+  flex-direction: column; /* Cambiar a columna en dispositivos móviles */
+}
+
+.cabecera {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8em 1.5em; /* Ajustar el padding para dispositivos móviles */
+  background-color: var(--color-negro-gris);
+  height: 80px; /* Reducir la altura para dispositivos móviles */
+}
+
+.cabecera img {
+  height: 30px; /* Reducir el tamaño del logo para dispositivos móviles */
+}
+
+.cabecera span {
+  display: none; /* Ocultar el texto adicional en dispositivos móviles */
 }

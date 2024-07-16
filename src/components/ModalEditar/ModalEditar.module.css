@@ -1,0 +1,91 @@
+.contenedor {
+  background-color: rgba(3, 18, 47, 0.7);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid var(--color-azul);
+  height: 2800px;
+}
+
+.modal {
+  position: relative;
+  background-color: #03122f;
+  border: 5px solid #6bd1ff;
+  border-radius: 15px;
+  padding: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--color-blanco);
+  font-family: "Roboto";
+}
+
+.modal h1 {
+  margin: 0 auto;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 60px;
+  line-height: 70px;
+  text-transform: uppercase;
+  color: #2271d1;
+  text-align: center;
+}
+
+.modal input,
+textarea {
+  width: 500px;
+  border-radius: 10px;
+  margin: 5px 0;
+  height: 52px;
+  background-color: #03122f;
+  border: 2px solid;
+  color: var(--color-blanco);
+  padding: 0 10px;
+  font-size: 18px;
+}
+
+.modal textarea {
+  height: 112px;
+  padding: 10px;
+}
+
+.botones {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.botones button {
+  background-color: #03122f;
+  color: var(--color-blanco);
+  border: 2px solid #6bd1ff;
+  border-radius: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  flex: 1;
+  margin: 0 5px;
+}
+
+.botones button:hover {
+  background-color: black;
+  box-shadow: inset 0 0 10px var(--color-frontend);
+}
+
+.closeButton {
+  width: 55px;
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  color: var(--color-blanco);
+  cursor: pointer;
+}

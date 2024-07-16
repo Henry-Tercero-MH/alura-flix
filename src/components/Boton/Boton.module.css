@@ -1,0 +1,18 @@
+.boton {
+  margin-top: 15px;
+  width: auto;
+  height: auto;
+  box-sizing: border-box;
+  display: flex;
+  box-sizing: border-box;
+}
+.boton button {
+  width: 181px;
+  height: 54px;
+  border-color: solid var(--color-blanco);
+  background-color: var(--color-negro);
+  border-radius: 10px;
+  color: var(--color-blanco);
+  text-transform: uppercase;
+  font-size: 18px;
+}

@@ -1,0 +1,25 @@
+.cajaComentario {
+  display: flex;
+  color: var(--color-blanco);
+  align-items: left;
+  align-content: center;
+  flex-direction: column;
+  box-sizing: border-box;
+  margin-top: 70px;
+}
+.cajaComentario textarea {
+  background-color: var(--color-negro);
+  width: 573px;
+  height: 220px;
+  margin-top: 10px;
+  border-radius: 10px;
+  resize: none;
+  color: var(--color-gris);
+  background-color: transparent;
+}
+.cajaComentario textarea:focus {
+  border-color: var(
+    --color-rojo
+  ); /* Cambiar color del borde cuando está enfocado */
+  outline: none;
+}

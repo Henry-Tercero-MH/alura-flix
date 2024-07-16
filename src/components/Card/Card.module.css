@@ -1,0 +1,49 @@
+.card {
+  width: 410px;
+  height: 380px;
+  background-color: black;
+  margin: 15px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  /* box-shadow: inset 0 0 20px var(--color-frontend); Sombra interna azul con desenfoque */
+  border: solid var(--color-frontend);
+  overflow: hidden;
+  text-align: center;
+  display: block;
+  justify-content: center;
+}
+.Cajaimagen {
+  width: 410px;
+  height: 250px;
+  border-radius: 10px 10px 0 0;
+  overflow: hidden;
+  border: none;
+  text-align: center;
+  border-bottom: solid var(--color-frontend);
+  padding: 15px;
+  box-shadow: inset 0 0 20px var(--color-frontend); /* Sombra interna azul con desenfoque */
+}
+
+.containerBoton {
+  width: 430px;
+  height: 59px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: space-evenly;
+  margin: 5px;
+}
+.boton {
+  display: flex;
+  background-color: transparent;
+  border: none;
+  gap: 6px;
+  font-family: Roboto;
+}
+
+.boton h3 {
+  color: aliceblue;
+}
+.caja {
+  display: block;
+}

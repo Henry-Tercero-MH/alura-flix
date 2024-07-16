@@ -1,0 +1,36 @@
+.equipo {
+  width: 100%;
+  height: auto;
+  color: var(--color-blanco);
+  box-sizing: border-box;
+  margin-bottom: 1.5rem;
+  margin-top: 0.5rem;
+  box-shadow: inset 0 0 15px var(--color-frontend); /* Sombra interna azul con desenfoque */
+}
+
+.titulo {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 32px;
+  line-height: 38px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  width: 432px;
+  height: 70px;
+  border-radius: 10px;
+  justify-content: center;
+  border-bottom: 5px solid var(--color-blanco);
+  box-shadow: inset 0 0 15px var(--color-negro); /* Sombra interna azul con desenfoque */
+  margin-bottom: 1rem;
+  margin-left: 1em;
+  margin-top: 1em;
+}
+.instructores {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 10px;
+}

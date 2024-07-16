@@ -1,0 +1,105 @@
+.formulario {
+  display: flex;
+  justify-content: center;
+  width: auto;
+  height: auto;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+.formulario form {
+  padding: 0px;
+  width: 908px;
+  height: 900px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  border-color: var(--color-negro-gris);
+  font-family: Roboto;
+  padding: 15px;
+}
+
+.formulario span {
+  /* Complete el formulario para crear una nueva tarjeta de video */
+  height: 56px;
+  width: auto;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--color-blanco);
+  justify-content: center;
+  /* Inside auto layout */
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  margin-bottom: 10px;
+}
+.formulario h2 {
+  text-align: left;
+  color: var(--color-blanco);
+  width: auto;
+  border-top: solid var(--color-gris);
+  border-bottom: solid var(--color-gris);
+  padding: 5px 0 5px;
+}
+
+.titulo {
+  color: var(--color-blanco);
+  text-transform: uppercase;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 60px;
+  line-height: 70px;
+  text-align: center;
+  padding-top: 3rem;
+  width: auto;
+}
+.cajaTexto {
+  display: flex;
+  justify-content: left;
+  padding-top: 5px;
+}
+.cajaTexto input {
+  width: 345px;
+  height: 62px;
+}
+
+.cajaTexto2 {
+  display: flex;
+  justify-content: left;
+  padding-top: 5px;
+  gap: 15px;
+  height: 62px;
+}
+.cajaTexto2 input {
+  width: 425px;
+  height: 62px;
+}
+.formulario ::placeholder {
+  color: var(--color-gris);
+  padding-left: 10px;
+}
+.formulario label {
+  display: flex;
+  justify-content: left;
+}
+.formulario input {
+  border-radius: 10px;
+  color: var(--color-gris);
+}
+
+.cajaBotones {
+  display: flex;
+  flex-direction: row;
+  width: 380px;
+  justify-content: space-between;
+}
+.cajaBotones button:hover {
+  border: solid 2px var(--color-azul);
+}

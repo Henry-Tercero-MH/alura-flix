@@ -1,0 +1,29 @@
+.lista {
+  font-weight: 400;
+  font-family: Roboto;
+  color: var(--color-blanco);
+  padding: 10px;
+  border-radius: 20 px;
+}
+.lista select {
+  display: block;
+  width: 326px;
+  height: 62px;
+  border-color: solid var(--color-gris);
+  background-color: transparent;
+  color: var(--color-blanco);
+  margin-top: 10px;
+  color: var(--color-gris); /* Color del texto */
+  padding: 10px; /* Relleno interior */
+  border: 2px solid var(--color-gris); /* Borde */
+  border-radius: 10px; /* Bordes redondeados */
+  outline: none;
+}
+select option {
+  background-color: var(--color-negro-gris);
+}
+.lista select:focus {
+  border-color: var(
+    --color-rojo
+  ); /* Cambiar color del borde cuando está enfocado */
+}
